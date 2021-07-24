@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globalStyle.css">
+    <link rel="stylesheet" href="css/cliente.css">
+    <script src="js/prod.js" defer></script>
+    <title>Gestão de Cadaastro | Clientes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-menu">
+            <a href="index.html" id="logo">
+                <img class="logo-img" src="assets/logo.jpg" width="150" height="150" alt="logo" />
+            </a>
+            <div>
+                <ul class="nav-list" id="menu" role="menu">
+                    <li><a href="index.html">GESTÃO DE CADASTRO - SL</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-container background-section">
+        <section class="card-cliente-cad">
+        <button type="button" class="button blue mobile" id="cadastrarProd">Cadastrar Produto</button>
+        <table id="tableProd" class="records">
+            <thead>
+                <tr>
+                    <th>Código Produto</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>            
+                    <th>Opção</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Incluir Novo Produto</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="number" id="cod" data-index="new" class="modal-field" placeholder=" Código do Cliente"
+                       maxlength="5" required>
+                    <input type="text" id="nome" class="modal-field" placeholder="Nome Produo" maxlength="40" required>
+                    <input type="text" id="preco" class="modal-field" placeholder="0,00" maxlength="9" required>
+                    <input type="text" id="description" class="modal-field" placeholder="Descrição:" maxlength="200" required>
+                    
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class='container-footer'>
+            Projeto desenvolvido por: Luiz Nascimento -&nbsp;
+            <a href='https://www.linkedin.com/in/luinsilva' target="_blank">Linkedin</a> &nbsp;| &nbsp;
+            <a href='https://github.com/luizns' target="_blank">Github</a>
+        </div>
+    </footer>
+</body>
+
+</html>

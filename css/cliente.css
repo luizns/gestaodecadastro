@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #0076BF;
+    --secundary-color: #FFF1CC;
+    --shadow-color: #CCC;
+    --text-color: #FFF;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+header{
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 70px;
+    box-shadow: 0 1px 2px var(--shadow-color);
+}
+
+.header-title{
+    color: black;
+    font-size: 2rem;
+}
+
+.card-cliente-cad{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 5vh auto;
+    padding: 50px;
+    box-shadow: 2px 2px 10px var(--shadow-color);
+    gap: 20px;
+}
+
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.modal-header{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    background-color: #FF4949;
+    color: white;
+}
+
+.modal-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.modal-field{
+    width: calc(50% - 10px);
+    height: 40px;
+    outline-style: none;
+    border-style: none;
+    box-shadow: 0 0 2px black;
+    padding: 0 10px;
+    font-size:1rem;
+}
+
+.modal-field:focus{
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 3px var(--primary-color);
+}
+
+
+.modal-footer{
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+
+
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: box-shadow .6s ease;
+}
+
+.button.blue{
+    background-color: #1FB6FF;
+}
+
+button.green{
+    background-color: #13CE66;
+}
+
+button.red{
+    background-color: #FF4949;
+}
+
+.button:hover{
+    box-shadow: inset 200px 0 0 #00000055;
+}
+
+
+
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+
+.records th{
+    height: 50px;
+    background-color: var(--primary-color);
+    padding-left: 20px;
+    font-size: 1.2rem;    
+    
+}
+.records td{
+    height: 50px;
+    padding-left: 20px;
+    background: #CCC;
+}
+
+.records th:last-child,
+.records td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.records td:hover{
+    background-color: burlywood;
+}

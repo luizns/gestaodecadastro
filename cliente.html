@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globalStyle.css">
+    <link rel="stylesheet" href="css/cliente.css">
+    <script src="js/script.js" defer></script>
+    <title>Gestão de Cadaastro | Clientes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-menu">
+            <a href="index.html" id="logo">
+                <img class="logo-img" src="assets/logo.jpg" width="150" height="150" alt="logo" />
+            </a>
+            <div>
+                <ul class="nav-list" id="menu" role="menu">
+                    <li><a href="index.html">GESTÃO DE CADASTRO - SL</a></li>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="section-container background-section">
+        <section class="card-cliente-cad">
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                    <th>Opção</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cadastro</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="number" id="id" data-index="new" class="modal-field" placeholder=" Código do Cliente"
+                       maxlength="5" required>
+                    <input type="text" id="nome" class="modal-field" placeholder="Nome do Cliente" maxlength="40" required>
+                    <input type="text" id="cpf" class="modal-field" placeholder="CPF:000.000.000-00" maxlength="14" required>
+                    <input type="email" id="email" class="modal-field" placeholder="E-mail:" maxlength="200" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="(99) 99999-9999" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Cidade" required>
+                    <input type="text" id="uf"  class="modal-field" placeholder="UF" maxlength="2" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class='container-footer'>
+            Projeto desenvolvido por: Luiz Nascimento -&nbsp;
+            <a href='https://www.linkedin.com/in/luinsilva' target="_blank">Linkedin</a> &nbsp;| &nbsp;
+            <a href='https://github.com/luizns' target="_blank">Github</a>
+        </div>
+    </footer>
+</body>
+
+</html>
